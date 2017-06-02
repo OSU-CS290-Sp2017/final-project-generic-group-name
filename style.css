@@ -3,3 +3,51 @@
 	font-size: 18px;
 	line-height: 22px;
 }
+ul {list-style-type: none;}
+.month{
+	padding: 50px 25px;
+	background-color: #1abc34;
+	width:90%;
+}
+.month ul{
+	margin: 0;
+	padding: 0;
+}
+.month ul li{
+	color: white;
+	font-size: 20px;
+	letter-spacing: 3px;
+}
+.weekdays{
+	margin: 0;
+	padding: 10px 0;
+	background-color:#ddd;
+}
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
