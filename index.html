@@ -12,13 +12,14 @@
       <h1 class=main-header> Women's Water Polo Club </h1>
       <nav>
         <ul class="navbar">
-          <li class="navitem" "navlink" "active"> Home </li>
-          <li class="navitem" "navlink"> Members </li>
+			 <li class="navitem" "navlink" "active"> <a href="./index.html"> Home </a></li>
+			 <li class="navitem" "navlink"> <a href="./aboutMembers.html"> Members </a></li>
 			 <li class="navitem" "navlink"> Calander </li>
         </ul>
       </nav>
     </header>
 
+	<!-- This slideshow info from w3schools.com/howto/howto-js_slideshow.asp -->
 	<div class="slideshow-container">
 		<div class="slides">
 			<img src=slideshow_images/image1.JPG> 
@@ -42,6 +43,12 @@
 
 	<a class="prev" onclick = "plusSlides(-1)"></a>
 	<a class="next" onclick = "plusSlides(1)"></a>
+
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+	</div>
 
 	<h1 class=about> About Us </h1>
 	<p class=aboutContent> </p>
