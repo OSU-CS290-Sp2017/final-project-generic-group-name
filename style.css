@@ -16,8 +16,6 @@
 }
 
 header{
-//	background-color: #7eb7ef;
-	
 	background-color: #ccecf3;
 }
 
@@ -29,6 +27,7 @@ header{
 }
 
 body{
+	font-family: 'lato', sans-serif;
 	margin: 0;
 }
 
@@ -37,11 +36,30 @@ body{
 	font-size: 22px;
 }
 
-.navitem{
-	display: inline-block;
-	margin: 10px;
+a{
+	color: black;
+	display: block;
+	text-decoration: none;
+	width: 110px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
 }
 
+a:hover{
+	background-color: #ccecf3;
+	color: #5dacf9;
+}
+
+.navitem{ 
+	display: inline-block;
+	font-weight: bold;
+}
+
+#active{
+	border-bottom: 4px solid;
+}
 
 //This slideshow info from w3schools.com/howto/howto-js_slideshow.asp
 .slideshow-container{
@@ -52,9 +70,14 @@ body{
 }
 
 .slides{
+	display: inline-block;
+}
+
+.slide-pic{
 //	display: none;
-	max-width: 230px;
-	max-height: 95px;
+	display: inline-block;
+	max-width: 500px;
+	max-height: 500px;
 	height: auto;
 	width: auto;
 }
@@ -63,3 +86,26 @@ body{
 	width: 50px;
 	height: 50px;
 }
+
+//Members
+
+.member-image{
+	display: inline-block;
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+
+.member-hobbies{
+	display: inline-block;
+}
+
+.three-hobbies{
+	display: inline-block;
+	margin: 0;
+}
+
+.member-about{
+	display: inline-block;
+}
+	
