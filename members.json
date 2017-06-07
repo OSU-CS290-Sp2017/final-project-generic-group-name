@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Casey",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Water_polo_ball.svg/768px-Water_polo_ball.svg.png",
+	"hobby1": "Weight Lifting",
+	"hobby2":"Chess",
+	"hobby3":"Overwatch",
+	"about": "I want to join the water polo club so that I can practice my swimming. I have never been a strong swimmer, so I'd like to take this opportunity to practice and meet new people. I am a bioengineering major with a minor in CS. An interesting fact about myself is that I was adopted from South Korea when I was 4 months old. Pleasure to meet y'all!"
+  },
+  {
+    "name": "Daniel",
+    "url": "",
+	"hobby1":"Woodworking",
+	"hobby2":"Procrastinating",
+	"hobby3":"Reading",
+	"about": "The water polo club sounds cool, and I would like to join a team.  I am bad at swimming, so I am taking a swimming lesson at Dixon.  I am a computer science major."
+  },
+  {
+    "name": "Brooke",
+    "url": "",
+	"hobby1":"Solitaire",
+	"hobby2":"Watching bad movies",
+	"hobby3":"Cooking",
+	"about": "I've been playing water polo for 8 years. I played in Beaverton, Oregon, for Sunset High School and Hills Club. I'm a sophomore in Computer Science."
+  },
+  {
+    "name": "Isabella",
+    "url": "/isabella_profile.jpg",
+	"hobby1":"Playing piano",
+	"hobby2":"Run on the indoor track",
+	"hobby3":"Binge-watch TV shows",
+	"about": "I have been playing water polo for about three years in California. I am currently a sophomore in Business Information Systems."
+  }
+ ]
