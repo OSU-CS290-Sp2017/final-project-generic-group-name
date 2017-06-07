@@ -1,0 +1,230 @@
+.header-image{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	float: left;
+	margin: 2px;
+}
+
+.main-header{
+	display: inline-block;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #5dacf9;
+
+}
+
+header{
+	background-color: #ccecf3;
+}
+
+.navbar{
+	background-color: #5dacf9;
+	font-size: 18px;
+	line-height: 22px;
+	margin: 0;
+}
+
+body{
+	font-family: 'lato', sans-serif;
+	margin: 0;
+}
+
+.navbar{
+	list-style-type: none;
+	font-size: 22px;
+}
+
+a{
+	color: black;
+	display: block;
+	text-decoration: none;
+	width: 110px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+}
+
+a:hover{
+	background-color: #ccecf3;
+	color: #5dacf9;
+}
+
+.navitem{ 
+	display: inline-block;
+	font-weight: bold;
+}
+
+#active{
+	border-bottom: 4px solid;
+}
+
+//This slideshow info from w3schools.com/howto/howto-js_slideshow.asp
+.slideshow-container{
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+.slides{
+	display: none;
+}
+
+.prev{
+	float: left;
+	cursor: pointer;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	background-color: grey;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.next{
+	float: right;
+	top: 50%;
+	cursor: pointer;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	background-color: grey;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,.next:hover{
+	background-color: rgba(0,0,0,0.8);
+}
+
+.dot{
+	cursor:pointer;
+	height: 13px;
+	width: 13px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+	background-color: #717171;
+}
+
+.slide-pic{
+	max-width: 600px;
+	max-height: 500px;
+	margin: auto;
+	display: block;
+}
+
+#create-announcement-button{
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	padding: 13px;
+	background-color: #ccecf3;
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px black;
+}
+
+//Members
+
+.member-image{
+	display: inline-block;
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+
+.member-hobbies{
+	display: inline-block;
+}
+
+.three-hobbies{
+	display: inline-block;
+	margin: 0;
+}
+
+.member-about{
+	display: inline-block;
+}
+
+.month{
+	
+	padding: 30px 25px;
+	background-color: #1abc34;
+
+}
+.month ul{
+	list-style-type: none;
+	margin: 0;
+	
+	padding: 0;
+}
+.month ul li{
+	text-align:center;
+	color: white;
+	font-size: 40px;
+	letter-spacing: 3px;
+}
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+	width: 13.6%;
+}
+
+.weekdays li {
+    display: inline-block;
+	font-size: 30px;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+	height: 100px;
+	vertical-align: top;
+	
+}
+.empty .days{
+	background-color:white;
+}
+.calendar{
+	width: 100%;
+}
+.days p {
+	text-align:center;
+}
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: left;
+	height: 50px;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+	
+	border: hidden;
+	
+}
+.error-container {
+  margin-top: 50px;
+  text-align: center;
+}
