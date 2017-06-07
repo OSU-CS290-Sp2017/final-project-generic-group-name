@@ -79,7 +79,7 @@ a:hover{
 	width: auto;
 	margin-top: -22px;
 	padding: 16px;
-	background-color: black;
+	background-color: grey;
 	font-weight: bold;
 	font-size: 18px;
 	transition: 0.6s ease;
@@ -93,7 +93,7 @@ a:hover{
 	width: auto;
 	margin-top: -22px;
 	padding: 16px;
-	background-color: black;
+	background-color: grey;
 	font-weight: bold;
 	font-size: 18px;
 	transition: 0.6s ease;
@@ -211,4 +211,9 @@ a:hover{
 	
 	border: hidden;
 	
+}
+
+.error-container {
+  margin-top: 50px;
+  text-align: center;
 }
