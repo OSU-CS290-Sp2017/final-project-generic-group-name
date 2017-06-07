@@ -31,3 +31,14 @@ function showSlides(n){
 
 	slides[slideIndex-1].style.display = "block";
 }
+
+function showNewMembersModal()
+{
+	var modalBackdrop = document.getElementById("modal-backdrop");
+  var createNewMemberModal = document.getElementById("new-member-modal");
+
+  modalBackdrop.classList.remove('hidden');
+  createNewMember.classList.remove('hidden');
+}
+var createNewMember = document.getElementById('create-new-member-button');
+createNewMember.addEventListener('click', showNewMembersModal);
