@@ -159,4 +159,56 @@ a:hover{
 .member-about{
 	display: inline-block;
 }
+
+.month{
 	
+	padding: 50px 25px;
+	background-color: #1abc34;
+
+}
+.month ul{
+	list-style-type: none;
+	margin: 0;
+	
+	padding: 0;
+}
+.month ul li{
+	text-align:center;
+	color: white;
+	font-size: 40px;
+	letter-spacing: 3px;
+}
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+	font-size: 30px;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: left;
+	height: 50px;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+	
+	border: hidden;
+	
+}
