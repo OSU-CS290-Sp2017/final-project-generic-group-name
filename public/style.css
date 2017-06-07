@@ -162,8 +162,8 @@ a:hover{
 
 .month{
 	
-	padding: 30px 25px;
-	background-color: #1abc34;
+	padding: 50px 25px;
+	background-color: #1b4d7e;
 
 }
 .month ul{
@@ -224,6 +224,7 @@ a:hover{
 	border: hidden;
 	
 }
+
 .error-container {
   margin-top: 50px;
   text-align: center;
