@@ -22,6 +22,7 @@ app.get('/', function(req, res, next){
 });
 */
 
+//add individual member pages here
 
 app.get('*', function (req, res) {
   res.status(404).render('404Page');
