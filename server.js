@@ -54,7 +54,7 @@ app.get('/aboutMembers.html', function(req,res,next){
 	res.render('aboutMembers', templateArgs);
 });
 
-
+app.use(express.static(path.join(__dirname, 'profilepics')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'slideshow_images')));
 
