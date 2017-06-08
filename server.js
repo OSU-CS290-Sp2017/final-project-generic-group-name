@@ -5,16 +5,18 @@ var fs = require('fs');
 var app = express();
 var port = process.env.PORT || 3000;
 var members = require('./members');
+//var bodyParser = require('body-parser');
 
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+//app.use(bodyParser.json());
 
 app.get('/', function (req, res, next) {
 	var tempTitle = "Women's Water Polo Club";
   var templateArgs = {
     title: tempTitle
-	
+
   };
 
   res.render('index', templateArgs);
@@ -24,7 +26,7 @@ app.get('/index.html', function (req, res, next) {
 	var tempTitle = "Women's Water Polo Club";
   var templateArgs = {
     title: tempTitle
-	
+
   };
 
   res.render('index', templateArgs);
