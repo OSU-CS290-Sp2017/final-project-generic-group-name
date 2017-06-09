@@ -97,12 +97,12 @@ function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 	var postRequest = new XMLHttpRequest();
 	postRequest.open("POST", postURL);
 	postRequest.setRequestHeader("Content-Type", "application/json");
-	postRequest.addEventListener("load", function(event))
+	postRequest.addEventListener("load", function(event)
 	{
 		var error;
 		if (event.target.status !== 200)
 		{
-			error = even.target.response;
+			error = event.target.response;
 		}
 		callback(error);
 	});
