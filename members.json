@@ -9,7 +9,7 @@
   },
   {
     "name": "Daniel",
-    "url": "",
+    "url": "/danielprofile.jpg",
 	"hobby1":"Woodworking",
 	"hobby2":"Procrastinating",
 	"hobby3":"Reading",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Brooke",
-    "url": "",
+    "url": "https://thumbs.dreamstime.com/z/diet-woman-eating-vegetable-salad-26750865.jpg",
 	"hobby1":"Solitaire",
 	"hobby2":"Watching bad movies",
 	"hobby3":"Cooking",
@@ -29,6 +29,6 @@
 	"hobby1":"Playing piano",
 	"hobby2":"Run on the indoor track",
 	"hobby3":"Binge-watch TV shows",
-	"about": "I have been playing water polo for about three years in California. I am currently a sophomore in Business Information Systems."
+	"about": "I am interested in playing water polo now that I have moved to Oregon for school. I am currently a sophomore in Business Information Systems."
   }
  ]
