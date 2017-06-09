@@ -1,62 +1,82 @@
-function showNewMemberModal()
-{
-	var modalBackdrop = document.getElementById("modal-backdrop");
-  var createNewMemberModal = document.getElementById("new-member-modal");
-	console.log("in showNewMemberModal");
+function showCreatememberModal() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var creatememberModal = document.getElementById('create-member-modal');
+
+  // Show the modal and its backdrop.
   modalBackdrop.classList.remove('hidden');
-  createNewMember.classList.remove('hidden');
+  creatememberModal.classList.remove('hidden');
+
 }
-var createNewMember = document.getElementById('create-new-member-button');
-createNewMember.addEventListener('click', showNewMemberModal);
-console.log("clicked on createNewMemeber button");
 
-function closeCancelNewMemberModal()
-{
-	var modalBackdrop = document.getElementById("modal-backdrop");
-	var createNewMemberModal = document.getElementById("new-membermodal");
-	console.log("in closeCancelNewMembersModal");
-	modalBackdrop.classList.add('hidden');
-	createNewMember.classList.add('hidden');
+
+function closeCreatememberModal() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var creatememberModal = document.getElementById('create-member-modal');
+
+  // Hide the modal and its backdrop.
+  modalBackdrop.classList.add('hidden');
+  creatememberModal.classList.add('hidden');
+
+  clearmemberInputValues();
+
 }
-var createNewMemberCancel = document.getElementsByClassName('modal-cancel-button');
-var createNewMemberClose = document.getElementsByClassName('modal-close-button');
-createNewMemberCancel[0].addEventListener("click", closeCancelNewMemberModal);
-createNewMemberClose[0].addEventListener("click", closeCancelNewMemberModal);
-console.log("clicked on closeCancelNewMembers button");
 
-function createNewMemberModal(event)
-{
-	var name = document.getElementById("member-name-input");
-	var hobby1 = document.getElementById("member-hobby1-input");
-	var hobby2 = document.getElementById("member-hobby2-input");
-	var hobby3 = document.getElementById("member-hobby3-input");
-	var aboutInfo = document.getElementById("member-text-input");
-	var uploadPhoto = document.getElementById("member-url-input");
 
-	if (name.value == "" || hobby1.value == "" || hobby2.value == "" || hobby3.value == "" || aboutInfo.value == "" || uploadPhoto.value == "")
-  {
-    alert("Error: all boxes need to be filled in order to create a profile.");
-    console.log("alert appeared");
-    return;
+function clearmemberInputValues() {
+
+  var memberInputElems = document.getElementsByClassName('member-input-element');
+  for (var i = 0; i < memberInputElems.length; i++) {
+    var input = memberInputElems[i].querySelector('input, textarea');
+    input.value = '';
   }
-	else
-	{
-		console.log("profile created properly");
-	}
-}
-
-function addNewMember()
-{
-	var name = document.getElementById("member-name-input").value;
-	var hobby1 = document.getElementById("member-hobby1-input").value;
-	var hobby2 = document.getElementById("member-hobby2-input").value;
-	var hobby3 = document.getElementById("member-hobby3-input").value;
-	var aboutInfo = document.getElementById("member-text-input").value;
-	var uploadPhoto = document.getElementById("member-url-input").value;
-
 
 }
 
+
+function generateNewmemberElem(memberText, memberName, memHobby1, memHobby2, memHobby3, memUrl) {
+
+  var memberTemplate = Handlebars.templates.member;
+  var memberData = {
+    about: memberText,
+   name: memberName,
+   hobby1: memHobby1,
+   hobby2: memHobby2,
+   hobby3: memHobby3,
+   url: memUrl
+  };
+
+  return memberTemplate(memberData);
+
+}
+
+
+function insertNewmember() {
+
+  var memberText = document.getElementById('member-about-input').value;
+  var memberName = document.getElementById('member-name-input').value;
+  var memHobby1 = document.getElementById('member-hobby1-input').value;
+  var memHobby2 = document.getElementById('member-hobby2-input').value;
+  var memHobby3 = document.getElementById('member-hobby3-input').value;
+  var memUrl = document.getElementById('photo-url-input').value;
+
+ 
+  if (memberText && memberName && memUrl && memHobby1 && memHobby2 && memHobby3) {
+
+      var newmemberElem = generateNewmemberElem(memberText, memberName, memHobby1, memHobby2, memHobby3, memUrl);
+      var memberContainer = document.querySelector('.member-container');
+      memberContainer.insertAdjacentHTML('beforeend', newmemberElem);
+    
+
+      closeCreatememberModal();
+
+  } else {
+
+    alert('You must input your name, bio info, three hobbies, and image URL to submit!');
+
+  }
+}
 
 function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 {
@@ -86,3 +106,29 @@ function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 	};
 	postRequest.send(JSON.stringify(postBody));
 }
+
+
+/*
+ * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
+ */
+window.addEventListener('DOMContentLoaded', function () {
+
+
+  
+
+  var creatememberButton = document.getElementById('create-member-button');
+  creatememberButton.addEventListener('click', showCreatememberModal);
+
+  var modalCloseButton = document.querySelector('#create-member-modal .modal-close-button');
+  modalCloseButton.addEventListener('click', closeCreatememberModal);
+
+  var modalCancalButton = document.querySelector('#create-member-modal .modal-cancel-button');
+  modalCancalButton.addEventListener('click', closeCreatememberModal);
+
+  var modalAcceptButton = document.querySelector('#create-member-modal .modal-accept-button');
+  modalAcceptButton.addEventListener('click', insertNewmember);
+
+
+
+
+});
