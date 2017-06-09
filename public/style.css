@@ -140,12 +140,29 @@ a:hover{
 }
 
 /*Members*/
+.member-container{
+	background-color: #f5f0f0;
+}
+
+.member{
+	background-color: white;
+	display: inline-block;
+	max-width: 500px;
+	max-height: 400px;
+	margin: 5px;
+	border: 2px solid black;
+}
 
 .member-image{
 	display: inline-block;
 	float: left;
-	width: 50px;
-	height: 50px;
+	max-width: 250px;
+	max-height: 250px;
+}
+
+.name{
+	font-weight: bold;
+	font-size: 25px;
 }
 
 .member-hobbies{
