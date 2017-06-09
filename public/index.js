@@ -110,11 +110,11 @@ function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 	var postBody =
 	{
 		name: name,
+		url: url,
 		hobby1: hobby1,
 		hobby2: hobby2,
 		hobby3: hobby3,
-		about: aboutInfo, //or is it just "about?"
-		url: url
+		about: about //or is it "aboutInfo?""
 	};
 	postRequest.send(JSON.stringify(postBody));
 }
