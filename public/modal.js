@@ -1,28 +1,30 @@
-function showNewMembersModal()
+function showNewMemberModal()
 {
 	var modalBackdrop = document.getElementById("modal-backdrop");
   var createNewMemberModal = document.getElementById("new-member-modal");
-
+	console.log("in showNewMemberModal");
   modalBackdrop.classList.remove('hidden');
   createNewMember.classList.remove('hidden');
 }
 var createNewMember = document.getElementById('create-new-member-button');
-createNewMember.addEventListener('click', showNewMembersModal);
+createNewMember.addEventListener('click', showNewMemberModal);
+console.log("clicked on createNewMemeber button");
 
-function closeCancelNewMembersModal()
+function closeCancelNewMemberModal()
 {
 	var modalBackdrop = document.getElementById("modal-backdrop");
 	var createNewMemberModal = document.getElementById("new-membermodal");
-
+	console.log("in closeCancelNewMembersModal");
 	modalBackdrop.classList.add('hidden');
 	createNewMember.classList.add('hidden');
 }
 var createNewMemberCancel = document.getElementsByClassName('modal-cancel-button');
 var createNewMemberClose = document.getElementsByClassName('modal-close-button');
-createNewMemberCancel[0].addEventListener("click", closeCancelNewMembersModal);
-createNewMemberClose[0].addEventListener("click", closeCancelNewMembersModal);
+createNewMemberCancel[0].addEventListener("click", closeCancelNewMemberModal);
+createNewMemberClose[0].addEventListener("click", closeCancelNewMemberModal);
+console.log("clicked on closeCancelNewMembers button");
 
-function createNewMembersModal(event)
+function createNewMemberModal(event)
 {
 	var name = document.getElementById("member-name-input");
 	var hobby1 = document.getElementById("member-hobby1-input");
