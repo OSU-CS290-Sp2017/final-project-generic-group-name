@@ -264,7 +264,7 @@ a:hover{
   margin-right: 10px;
 }
 
-.member-name-input input {
+#member-name-input input {
   flex: 6 200px;
   padding: 8px;
   font-size: 20px;
@@ -277,7 +277,7 @@ a:hover{
   margin-right: 10px;
 }
 
-.member-hobby1-input input {
+#member-hobby1-input input {
   flex: 6 200px;
   padding: 8px;
   font-size: 20px;
@@ -290,7 +290,7 @@ a:hover{
   margin-right: 10px;
 }
 
-.member-hobby2-input input {
+#member-hobby2-input input {
   flex: 6 200px;
   padding: 8px;
   font-size: 20px;
@@ -304,7 +304,7 @@ a:hover{
   margin-right: 10px;
 }
 
-.member-hobby3-input input {
+#member-hobby3-input input {
   flex: 6 200px;
   padding: 8px;
   font-size: 20px;
@@ -332,7 +332,7 @@ a:hover{
   margin-right: 10px;
 }
 
-.member-url-input input {
+#member-url-input input {
   flex: 6 200px;
   padding: 8px;
   font-size: 20px;
