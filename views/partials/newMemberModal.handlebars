@@ -1,43 +1,47 @@
-<button id="create-new-member-button"> <i class="fa fa-bullhorn"> </i> </button>
+<button type="button" id="create-member-button"><i class="fa fa-bullhorn"></i></button>
+
 <div id="modal-backdrop" class="hidden"></div>
-<div id="new-member-modal" class="hidden">
+<div id="create-member-modal" class="hidden">
   <div class="modal-dialog">
 
     <div class="modal-header">
-      <h3>New Member</h3>
+      <h3>Become a Member and Tell Everyone About Yourself</h3>
       <button type="button" class="modal-close-button">&times;</button>
     </div>
 
     <div class="modal-body">
-      <div class="member-input-element">
-        <label for="member-name-input">Name</label>
+	  <div class="member-input-element">
+        <label for="member-attribution-input">Member Name</label>
         <input type="text" id="member-name-input">
       </div>
       <div class="member-input-element">
-        <label for="member-hobby1-input">List a hobby:</label>
+        <label for="member-text-input">Bio</label>
+        <textarea id="member-about-input"></textarea>
+      </div>
+	  <div class="member-input-element">
+        <label for="member-attribution-input">Hobby 1</label>
         <input type="text" id="member-hobby1-input">
       </div>
-      <div class="member-input-element">
-        <label for="member-hobby2-input">List another hobby:</label>
+	  <div class="member-input-element">
+        <label for="member-attribution-input">Hobby 2</label>
         <input type="text" id="member-hobby2-input">
       </div>
-      <div class="member-input-element">
-        <label for="member-hobby3-input">List another hobby:</label>
+	  <div class="member-input-element">
+        <label for="member-attribution-input">Hobby 3</label>
         <input type="text" id="member-hobby3-input">
       </div>
-      <div class="member-input-element">
-        <label for="member-text-input">Tell us a little bit about yourself:</label>
-        <textarea id="member-text-input"></textarea>
+	  <div class="member-input-element">
+        <label for="photo-url-input">Photo URL</label>
+        <input type="text" id="photo-url-input">
       </div>
-      <div class "member-input-element">
-        <label for="member-url-input">Upload profile picture</label>
-        <input type="text" id ="member-url-input">
+      
     </div>
 
     <div class="modal-footer">
       <button type="button" class="modal-cancel-button">Cancel</button>
-      <button type="button" class="modal-accept-button">Create</button>
+      <button type="button" class="modal-accept-button">Create Profile</button>
     </div>
 
   </div>
 </div>
+
