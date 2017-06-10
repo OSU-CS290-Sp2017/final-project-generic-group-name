@@ -12,42 +12,44 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 //app.use(bodyParser.json());
 
-app.get('/', function (req, res, next) {
+app.get('/', function (req, res, next)
+{
 	var tempTitle = "Women's Water Polo Club";
   var templateArgs = {
     title: tempTitle
-
   };
-
-  res.render('index', templateArgs);
-
+	res.render('index', templateArgs);
 });
-app.get('/index.html', function (req, res, next) {
+
+app.get('/index.html', function (req, res, next)
+{
 	var tempTitle = "Women's Water Polo Club";
   var templateArgs = {
     title: tempTitle
-
   };
-
   res.render('index', templateArgs);
-
 });
 
-app.get('/calendar.html', function (req, res, next){
+app.get('/calendar.html', function (req, res, next)
+{
 	var tempTitle = "June 2017 Events Calendar";
 	var templateArgs = {
 		title: tempTitle
 	}
 	res.render('calendar', templateArgs);
 });
-app.get('/calendar', function (req, res, next){
+
+app.get('/calendar', function (req, res, next)
+{
 	var tempTitle = "June 2017 Events Calendar";
 	var templateArgs = {
 		title: tempTitle
 	}
 	res.render('calendar', templateArgs);
 });
-app.get('/aboutMembers.html', function(req, res, next){
+
+app.get('/aboutMembers.html', function(req, res, next)
+{
 	var tempTitle = "Women's Water Polo Club Members";
 	var templateArgs = {
 		people: members,
