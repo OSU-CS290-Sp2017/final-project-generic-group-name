@@ -128,19 +128,6 @@ a:hover{
 	display: block;
 }
 
-/*#create-announcement-button{
-	width: 30px;
-	height: 30px;
-	position: fixed;
-	bottom: 5px;
-	right: 5px;
-	padding: 13px;
-	background-color: #ccecf3;
-	border-radius: 50%;
-	box-shadow: 0 0 0 5px black;
-	cursor: none;
-}*/
-
 .about {
 	margin-left: 20px;
 }
