@@ -27,8 +27,8 @@ function clearmemberInputValues()
   }
 }
 
-function generateNewmemberElem(memberText, memberName, memHobby1, memHobby2, memHobby3, memUrl) {
-
+function generateNewmemberElem (memberText, memberName, memHobby1, memHobby2, memHobby3, memUrl)
+{
   var memberTemplate = Handlebars.templates.member;
   var memberData = {
     about: memberText,
@@ -41,46 +41,47 @@ function generateNewmemberElem(memberText, memberName, memHobby1, memHobby2, mem
   return memberTemplate(memberData);
 }
 
-function insertNewmember() {
-
+function insertNewmember()
+{
   var about = document.getElementById('member-about-input').value;
   var name = document.getElementById('member-name-input').value;
   var hobby1 = document.getElementById('member-hobby1-input').value;
   var hobby2 = document.getElementById('member-hobby2-input').value;
   var hobby3 = document.getElementById('member-hobby3-input').value;
   var url = document.getElementById('photo-url-input').value;
-
- storeNewMember(name, hobby1, hobby2, hobby3, about, url, function (err) {
-
-        if (err) {
-          alert("Unable to save member card.  Got this error:\n\n" + err);
-        };
+  storeNewMember (name, hobby1, hobby2, hobby3, about, url, function (err)
+  {
+    if (err)
+    {
+      alert("Unable to save member card.  Got this error:\n\n" + err);
+    };
  });
- 
-  if (about && name && url && hobby1 && hobby2 && hobby3) {
 
+    if (about && name && url && hobby1 && hobby2 && hobby3)
+    {
       var newmemberElem = generateNewmemberElem(about, name, hobby1, hobby2, hobby3, url);
       var memberContainer = document.querySelector('.member-container');
       memberContainer.insertAdjacentHTML('beforeend', newmemberElem);
-    
-
       closeCreatememberModal();
-
-  } else {
-
-    alert('You must input your name, bio info, three hobbies, and image URL to submit!');
-
-  }
+    }
+    else
+    {
+      alert('You must input your name, bio info, three hobbies, and image URL to submit!');
+    }
 }
 
-function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
+function storeNewMember (name, hobby1, hobby2, hobby3, about, url, callback)
 {
+<<<<<<< HEAD
 	var postURL = "/aboutMembers.html";
 
+=======
+	var postURL = "/aboutMember.html";
+>>>>>>> 5893bf0b510b21e5c312a7d499985e9e6538bfe1
 	var postRequest = new XMLHttpRequest();
 	postRequest.open("POST", postURL);
 	postRequest.setRequestHeader("Content-Type", "application/json");
-	postRequest.addEventListener("load", function(event)
+	postRequest.addEventListener("load", function(event) //no end parenthesis?
 	{
 		var error;
 		if (event.target.status !== 200)
@@ -89,7 +90,6 @@ function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 		}
 		callback(error);
 	});
-
 	var postBody =
 	{
 		name: name,
@@ -97,11 +97,10 @@ function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 		hobby1: hobby1,
 		hobby2: hobby2,
 		hobby3: hobby3,
-		about: about 
+		about: about
 	};
 	postRequest.send(JSON.stringify(postBody));
 }
-
 
 /*
  * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
