@@ -75,7 +75,7 @@ function insertNewmember() {
 
 function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 {
-	var postURL = "/aboutMember.html";
+	var postURL = "/aboutMembers.html";
 
 	var postRequest = new XMLHttpRequest();
 	postRequest.open("POST", postURL);
