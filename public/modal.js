@@ -41,31 +41,41 @@ function generateNewmemberElem(memberText, memberName, memHobby1, memHobby2, mem
   return memberTemplate(memberData);
 }
 
-function insertNewmember()
-{
-  var memberText = document.getElementById('member-about-input').value;
-  var memberName = document.getElementById('member-name-input').value;
-  var memHobby1 = document.getElementById('member-hobby1-input').value;
-  var memHobby2 = document.getElementById('member-hobby2-input').value;
-  var memHobby3 = document.getElementById('member-hobby3-input').value;
-  var memUrl = document.getElementById('photo-url-input').value;
+function insertNewmember() {
 
-  if (memberText && memberName && memUrl && memHobby1 && memHobby2 && memHobby3) {
+  var about = document.getElementById('member-about-input').value;
+  var name = document.getElementById('member-name-input').value;
+  var hobby1 = document.getElementById('member-hobby1-input').value;
+  var hobby2 = document.getElementById('member-hobby2-input').value;
+  var hobby3 = document.getElementById('member-hobby3-input').value;
+  var url = document.getElementById('photo-url-input').value;
 
-      var newmemberElem = generateNewmemberElem(memberText, memberName, memHobby1, memHobby2, memHobby3, memUrl);
+ storeNewMember(name, hobby1, hobby2, hobby3, about, url, function (err) {
+
+        if (err) {
+          alert("Unable to save member card.  Got this error:\n\n" + err);
+        };
+ });
+ 
+  if (about && name && url && hobby1 && hobby2 && hobby3) {
+
+      var newmemberElem = generateNewmemberElem(about, name, hobby1, hobby2, hobby3, url);
       var memberContainer = document.querySelector('.member-container');
       memberContainer.insertAdjacentHTML('beforeend', newmemberElem);
+    
+
       closeCreatememberModal();
-  }
-  else
-  {
-    alert('You must fill out all information to submit!');
+
+  } else {
+
+    alert('You must input your name, bio info, three hobbies, and image URL to submit!');
+
   }
 }
 
 function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 {
-	var postURL = "/people" + name;
+	var postURL = "/aboutMember.html";
 
 	var postRequest = new XMLHttpRequest();
 	postRequest.open("POST", postURL);
@@ -75,7 +85,7 @@ function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 		var error;
 		if (event.target.status !== 200)
 		{
-			error = even.target.response;
+			error = event.target.response;
 		}
 		callback(error);
 	});
@@ -87,7 +97,7 @@ function storeNewMember(name, hobby1, hobby2, hobby3, about, url, callback)
 		hobby1: hobby1,
 		hobby2: hobby2,
 		hobby3: hobby3,
-		about: about //or is it "aboutInfo?""
+		about: about 
 	};
 	postRequest.send(JSON.stringify(postBody));
 }
