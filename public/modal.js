@@ -72,12 +72,8 @@ function insertNewmember()
 
 function storeNewMember (name, hobby1, hobby2, hobby3, about, url, callback)
 {
-<<<<<<< HEAD
 	var postURL = "/aboutMembers.html";
 
-=======
-	var postURL = "/aboutMember.html";
->>>>>>> 5893bf0b510b21e5c312a7d499985e9e6538bfe1
 	var postRequest = new XMLHttpRequest();
 	postRequest.open("POST", postURL);
 	postRequest.setRequestHeader("Content-Type", "application/json");
