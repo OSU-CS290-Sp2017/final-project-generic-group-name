@@ -287,6 +287,7 @@ a:hover{
   color: black;
   cursor: pointer;
   box-shadow: 0 0 0 5px black;
+	margin: 10px;
 }
 
 #create-member-button:hover,
