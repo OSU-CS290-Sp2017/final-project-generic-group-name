@@ -55,26 +55,6 @@ app.get('/aboutMembers.html', function(req, res, next){
 	res.render('aboutMembers', templateArgs);
 });
 
-/*app.post("/people:member/", function(req, res, next)
-{
-	var person = members[req.params.person];
-	if (person)
-	{
-		if (req.body && req.body.url && req.body.name && req.body.hobby1 && req.body.hobby2 && req.body.hobby3 && req.body.about)
-		{
-			var templateArgs = {
-				name: req.body.name,
-				url: req.body.url,
-				hobby1: req.body.hobby1,
-				hobby2: req.body.hobby2,
-				hobby3: req.body.hobby3,
-				about: req.body.about
-			};
-			person.name = person.name;
-		}
-	}
-});*/
-
 app.post('/aboutMembers.html', function (req, res)
 {
     if (req.body)
